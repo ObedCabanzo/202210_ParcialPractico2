@@ -12,9 +12,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of articulos"  >
+            <tr *ngFor="let item of articulos" id="rn"  >
               <th scope="row">{{item.id}}</th>
-              <td class="clickable" (click)="clickArticulo(item)">{{item.name}}</td>
+              <td class="clickable" (click)="clickArticulo(item)"><a href="#rn">{{item.name}}</a></td>
               <td >{{item.collection}}</td>
               <td>{{item.price}}</td>
             </tr>
