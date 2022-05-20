@@ -1,0 +1,30 @@
+<div class="container-fluid margin">
+  <div class="row">
+    <div class = "col-7" >
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Collection</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of articulos"  >
+              <th scope="row">{{item.id}}</th>
+              <td class="clickable" (click)="clickArticulo(item)">{{item.name}}</td>
+              <td >{{item.collection}}</td>
+              <td>{{item.price}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>AVG PRICE: {{avgPrice}}</p>
+      </div>
+    </div>
+    <div class = "col-2" >
+      <app-detalle_articulo *ngIf="active_link=='articulo-detalle'" [articulo]="articuloSeleccionado"></app-detalle_articulo>
+    </div>
+  </div>
+</div>
